@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      /* border: 1px solid black; */
+      margin: 0 50 60 50;
+      border-style: ridge;
+      
+    }
+    .outline{
+      display: grid;
+      justify-content: center;
+    }
+    form{
+      display:grid;
+      grid-template-columns: 90px 9fr;
+      
+    }
+    .submit{
+      display: flex;
+      justify-content: center;
+    }
+    .id1 {
+      border:0;
+      
+    }
+    .phone1{
+      display: flex;
+      flex-direction:row;
+      align-items: center;
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="outline">
+    <h2 class="join">회원가입</h2>
+    </div>
+    <div class="grid">
+      <form action="">
+      
+        <div class="id1">
+          <label for="id">아이디</label>
+        </div>
+        <div class="id2">
+         <input type="text">
+         <input type="button" value="중복확인" />
+        </div>
+        <div class="name">
+          <label for="name">이름</label>
+        </div>
+      
+        <div class="name2">
+         <input type="text">
+        </div>
+         <div class="gender1">
+         <label for="성별">성별</label>
+        </div>
+        <div class="gender2">
+          <input type="radio">남
+          <input type="radio">여
+        </div>
+      
+        <div class="password1">
+         <label for="password">비밀번호</label>
+        </div>
+      
+        <div class="password2">
+         <input type="password">
+        </div>
+      
+        <div class="email1">
+        <label for="email">이메일</label>
+        </div>
+        <div class="email2">
+          <input type="text">@<input type=""text">
+          <select name="" id="">
+            <option value="email">naver.com</option>
+             <option value="">google.com</option>
+          </select>
+        </div>
+      
+        <div class="address1">
+        <label for="address">주소</label>
+        </div>
+        <div class="address2">
+          <input type="text">
+          <button>주소찾기</button>
+        </div>
+       <div class="phone1">
+        <label for="phone">휴대폰</label>
+       </div>
+      
+       <div class="phone2">
+        <input type="radio">SKT
+        <input type="radio">KT
+        <input type="radio">LGU+
+          <div class="phoneNum">
+           <select name="" id="">
+             <option value="phoneNum">010</option>
+              <option value="phoneNum">011</option>
+              <option value="phoneNum">016</option>
+              <option value="phoneNum">018</option>
+              <input type="tel">
+            </select>
+          </div>
+        </div>
+        <div class="interest1">
+          <label for="">관심</label>
+        </div>
+        <div class="interest2">
+          <input type="checkbox">쇼핑
+          <input type="checkbox">게임
+          <input type="checkbox">여행
+          <input type="checkbox">기타
+        </div>
+        <div class="introduce1">
+          <label for="">자기소개</label>
+        </div>
+        <div class="introduce2">
+          <textarea cols="30" rows>
+        </div>
+    </div>
+
+      <div class="submit">
+        <input type="submit" value="확인">
+        <input type="submit" value="다시입력">
+      </div>
+    </form>
+
+  </div>
+  
+</body>
+</html>

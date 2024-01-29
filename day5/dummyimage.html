@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      outline: 1px solid red;
+    }
+    .cont{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,200px);
+      gap:10px;
+      padding: 10px;
+    }
+    .cont .item{
+      border-radius: 50%; 
+    }
+    .cont .item img{
+      border-radius: 50%;    
+    }
+    .cont .item img:hover{
+      trasform: scale(1.2);
+      transition: all ese .5s 0s;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- .con>.item*9>img -->
+  <div class="cont">
+    <div class="item"><img src="" alt=""></div>
+    <div class="item"><img src="" alt=""></div>
+    <div class="item"><img src="" alt=""></div>
+    <div class="item"><img src="" alt=""></div>
+    <div class="item"><img src="" alt=""></div>
+    <div class="item"><img src="" alt=""></div>
+    <div class="item"><img src="" alt=""></div>
+    <div class="item"><img src="" alt=""></div>
+    <div class="item"><img src="" alt=""></div>
+  </div>
+</body>
+</html>

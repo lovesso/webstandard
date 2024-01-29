@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex01_Sol - flex</title>
+  <style>
+    * {
+      /* outline: 1px solid black; */
+    }
+
+    :root {
+      /* --해서 이름 변수 선언 */
+      --bg-color1: #452c54;
+      --bg-color2: #5F3C73;
+      --bg-color3: #754A8E;
+      --bg-color4: #8B58A9;
+      --bg-color5: #9D73B7;
+      --bg-color6: #AF8CC4;
+    }
+
+    /* ---------- 공통속성---------- */
+    .wrap .container {
+      display: flex;
+      justify-content: center;
+    }
+    .wrap .container .container-item {
+      width: 50vw;
+      background-color: lightgoldenrodyellow;
+
+      /* 주축과 교차죽을 center로 (Text정렬) */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* ------- Uppermost Menu ------- */
+    .wrap .container.umh-wrap {
+      height: 50px;
+      background-color: var(--bg-color1);
+    }
+    .wrap .container.umh-wrap .umh {
+      background-color: var(--bg-color2);
+    }
+    
+    /* -------------- header -------------- */
+    .wrap .container.hdr-wrap {
+      height: 100px;
+      background-color: var(--bg-color2);
+    }
+    .wrap .container.hdr-wrap .hdr {
+      background-color: var(--bg-color3);
+    }
+
+    /* -------------- gnb -------------- */
+    .wrap .container.gnb-wrap {
+      height: 50px;
+      background-color: var(--bg-color3);
+    }
+    .wrap .container.gnb-wrap .gnb{
+      background-color: var(--bg-color4);
+    }
+
+    /* -------------- main -------------- */
+    .wrap .container.main-wrap {
+      height: 250px;
+    }
+    .wrap .container .container-item.main {
+      display: flex;
+      border: 5px solid black;
+      /* 교차축정렬 길게 뻗기 stretch */
+      align-items: stretch;
+      /* 테두리 경계선 맞추기 */
+      box-sizing: border-box;
+    }
+    
+    .wrap .container .container-item.main :nth-of-type(1) { /* .wrap .container .container-item.main .content 와 동일 */
+      flex : 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wrap .container .container-item.main .sb {
+      flex : 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wrap .container .container-item.main :nth-of-type(3) { /* .wrap .container .container-item.main .sm 과 동일 */
+      flex : 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* -------------- Footer Menu -------------- */
+    .wrap .container.fm-wrap {
+      height: 50px;
+      background-color: var(--bg-color4);
+    }
+    .wrap .container .fm {
+      background-color: var(--bg-color5);
+    }
+
+    /* -------------- Footer -------------- */
+    .wrap .container.footer-wrap {
+      height: 50px;
+      background-color: var(--bg-color5);
+    }
+    .wrap .container .footer {
+      height: 50px;
+      background-color: var(--bg-color6);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- .wrap>.umh{Uppermost Menu}+.hdr{Header}+.gnb{gnb}+.main>.content{Content}+.sb{Sidebanner}+.sm{Sidemenu}^.fm{Foot Menu}+.footer{Footer} -->
+  <div class="wrap">
+
+    <div class="container umh-wrap">
+      <div class="container-item umh">Uppermost Menu</div>
+    </div>
+
+    <div class="container hdr-wrap">
+      <div class="container-item hdr">Header</div>
+    </div>
+
+    <div class="container gnb-wrap">
+      <div class="container-item gnb">gnb</div>
+    </div>
+
+    <div class="container main-wrap">
+      <div class="container-item main">
+        <div class="content">Content</div>
+        <div class="sb">Sidebanner</div>
+        <div class="sm">Sidemenu</div>
+      </div>
+    </div>
+
+    <div class="container fm-wrap">
+      <div class="container-item fm">Foot Menu</div>
+    </div>
+
+    <div class="container footer-wrap">
+      <div class="container-item footer">Footer</div>
+    </div>
+
+  </div>
+</body>
+</html>

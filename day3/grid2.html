@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {outline: 1px solid red;}
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: 100px 1fr 100px;
+      grid-template-rows: 200px 50px auto 70px 20px 70px;
+      grid-template-areas:  "header   header   header"
+                            "gnb      gnb      gnb   "
+                            "side-a   main     side-b"
+                            " .       .        .     "
+                            "footer   footer   footer"
+      
+      ;
+    }
+    header{
+      grid-area: header;
+      background-image: url('https://cdn.pixabay.com/photo/2015/06/24/01/15/coffee-819362_640.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    } 
+    nav {
+      grid-area: gnb;
+  
+    }
+    nav ul{
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      padding:0px;
+      background-color: #333;
+    }
+    nav ul li a{
+      padding:5px 10px;
+      background-color: #333;
+      color: #eee;
+    }
+    nav ul li a:hover{
+      background-color: #aaa;
+    }
+    aside.left{
+      grid-area:side-a;
+    }
+    main{
+      grid-area:main;
+      background-color: pink;
+    }
+    /* main:hover{
+      z-index: 100;
+	    transform: scale(1,2);
+      transition: transform ease .5s 0s;
+    } */
+    aside.right{
+      grid-area:side-b;
+    }
+    footer{
+      grid-area:footer;
+    }
+   
+  </style>
+</head>
+<body>
+  <!-- .container>header{header}+aside{aside}+main{main}+aside{aside}+footer{footer} -->
+<div class="container">
+  <header>header</header>
+  <nav>
+    <ul>
+      <li><a href="http://www.naver.com">네이버</a></li>
+      <li><a href="http://www.google.com">구글</a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </nav>
+  <aside class="left">aside</aside>
+  <main>main
+    <section class="s1">
+      <h1>섹션1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt mollitia corrupti maiores dolores inventore aspernatur. Sint adipisci consequuntur, quis delectus cumque id autem officiis aliquam sunt corporis voluptate blanditiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laudantium enim temporibus? Deleniti necessitatibus esse nostrum tenetur, maiores, omnis fugit consectetur quis cumque animi dolores, nemo libero eos. Omnis, impedit!</p>
+  </section>
+
+    <section class="s2">
+      <h3>섹션2</h3>
+      <ul>
+        <li>항목1</li>
+        <li>항목2</li>
+        <li>항목3</li>
+      </ul>
+    </section>
+    <section class="s3">
+      <h2>섹션3</h2>
+    <form action="">
+      <label for="">이메일링"></label>
+      <input type="text" name="" id="">
+      </form>
+    </section>
+
+  </main>
+  <aside class="right">
+
+  </aside>
+  <asid class="right"></asid>
+  <footer><p>KH인재교육원</p></footer>
+</div>
+</body>
+</html>

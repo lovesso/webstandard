@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        border: 1px solid #080000;
+        margin: 0;
+      }
+      .container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(38, 143, 38);
+        height: 40px;
+      }
+      .container1 .menu {
+        background-color: rgb(24, 203, 24);
+        width: 500px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(38, 143, 38);
+        height: 100px;
+      }
+      .container2 .head {
+        background-color: lightgreen;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+      }
+      .container3 {
+        background-color: lightgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+      }
+      .container3 .navigation {
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        align-items: center;
+        background-color: rgb(105, 167, 105);
+      }
+      .container4 {
+        height: 200px;
+      }
+      .container4 .main {
+        width:500px;
+        display: flex;
+        align-items: stretch;
+        
+        border: 5px solid #000;
+        box-sizing: border-box;
+      }
+      .container4 .main :nth-of-type(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 2;
+      }
+      .container4 .main :nth-of-type(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+      .container4 .main :nth-of-type(3) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+      .container5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        background-color: lightgreen;
+      }
+      .container5 .footer {
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        align-items: center;
+        background-color: rgb(105, 167, 105);
+      }
+      .container6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        background-color: rgb(112, 163, 35);
+      }
+      .container6 .lastfooter {
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        height: 100px;
+        align-items: center;
+        background-color: rgb(214, 240, 176);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="menu">uppermost Menu</div>
+    </div>
+
+    <div class="container2">
+      <div class="head">Header</div>
+    </div>
+
+    <div class="container3">
+      <div class="navigation">Nav</div>
+    </div>
+
+    <div class="container4">
+      <div class="main">
+        <div class="con">Content</div>
+        <div class="sb">Sidebanner</div>
+        <div class="sm">Sidemenu</div>
+      </div>
+    </div>
+
+    <div class="container5">
+      <div class="footer">Footer Menu</div>
+    </div>
+
+    <div class="container6">
+      <div class="lastfooter">Footer</div>
+    </div>
+  </body>
+</html>

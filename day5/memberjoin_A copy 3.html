@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- [확인] [다시입력]버튼 안쪽으로 넣기-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 외부에서 폰트 불러오겠다고 선언 -->
+  <script src="https://kit.fontawesome.com/144af2c975.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Hi+Melody&display=swap" rel="stylesheet">
+  <style>
+    /* * { outline: 1px solid red;} 스타일 만들때 만들어 놓고 시작*/
+    body{ margin:0;}
+    
+    
+    /* 버튼속성 */
+    .btn{
+      background-color:lightcoral;
+      color: #fff;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-weight: bold;
+      font-family: inherit;
+    }
+    /* 전체 - 가입창 중앙배치 & 이미지 중앙배치*/
+    .wrap {   
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;    
+    }
+    /* 회원 가입 부문 */
+    .wrap .member_join-wrap { 
+     width:600px;     
+    }
+    /* 회원가입 타이틀 */
+    .wrap .member_join-wrap .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: .2rem; /* 10픽셀의 20% */
+    }
+    /* 회원가입 폰트 꾸미기 */
+    .wrap .member_join-wrap .title h2{
+      box-shadow: 5px 5px 5px 5px rgb(31, 146, 191);
+
+      font-family: 'Cute Font', sans-serif;
+      font-family: 'Hi Melody', sans-serif;   
+    }
+    /* 회원가입 양식 */
+    .wrap .member_join-wrap .member_join .join_frm {
+      display: grid;
+      grid-template-columns: 100px auto;
+      grid-auto-rows: repeat(11, auto);
+      gap:2px; /*주변 테두리 갭 만들기 */
+      padding:2px;
+      box-sizing: border-box;
+      text-transform: capitalize;
+
+      font-family: 'Cute Font', sans-serif;
+      font-family: 'Hi Melody', sans-serif;
+      font-weight: bold;
+    }
+    .wrap .member_join-wrap .member_join .join_frm select{
+      font-family: 'Cute Font', sans-serif;
+      font-family: 'Hi Melody', sans-serif;
+      font-weight: bold;
+    }
+    .wrap .member_join-wrap .member_join .join_frm > div {
+      padding-left:0px 5px;
+      border:1px solid black;
+    }
+    .wrap .member_join-wrap .member_join .join_frm > div > label {
+      letter-spacing: 5px;
+      padding-left: 5px;
+    }
+
+    /* 회원가입 버튼그룹을 폼 안으로 이동시키기 */
+    .wrap .member_join-wrap .member_join .join_frm > div.btn_grp {
+      /* grid-row: 11/12; */
+      grid-column: 1 / 3;
+      display: flex;
+      justify-content: center;
+      border: 0px;
+      padding-top:10px;
+    }    
+    .wrap .member_join-wrap .member_join .join_frm > div.btn_grp input[type="button"]{
+      margin-right:5px;     
+    }
+
+    .wrap .member_join-wrap .member_join .join_frm > div > .fa-solid fa-envelope-open-text {
+      color:pink;
+      font-weight: 400px;
+      font-size: 
+    }
+    .fa-solid fa-mobile-retro {
+      color: pink;
+    }
+    /* 배너 배경이미지 */
+    .wrap .banner { /*주소링크 넣어도 안보이는 이유는 사이즈가 없어서 */
+      background-image: url(https://cdn.pixabay.com/photo/2016/11/22/19/30/squirrel-1850210_1280.jpg);
+      background-size:cover; /*해상도 높아 안보여서 이미지가 엘리먼트를 꽉 채우도록 조절*/
+      background-repeat: no-repeat;/*이미지 반복 안하기 */
+      /* background-position-y: center;
+      background-position-x: center; */
+      background-position: center; /*상단 포지션의 단축속성 , 이미지가 중앙에 위치*/
+      width:600px;
+      height:150px;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="wrap">
+     <!-- 배경이미지 넣기 -->
+     <div class="banner"></div> 
+    <div class="member_join-wrap">
+     
+      <div class="title">
+        <h2>회원가입</h2>
+      </div>
+      <div class="member_join">
+        <form action="" class="join_frm">
+          <div><label for="id">아이디</label></div>
+          <div>
+            <input type="text" id="id">
+            <input class="btn" type="button" value="중복확인">
+          </div>
+          <div><label for="name">이름</label></div>
+          <div><input type="text" id="name"></div>
+          <div><label for="">성별</label></div>
+
+          <div>
+            <input type="radio" name="gender" id=""><label for="">남</label>
+            <input type="radio" name="gender" id=""><label for="">여</label>
+          </div>
+
+          <div><label for="pwd">암호</label></div>
+          <div><input type="password" id="pwd"></div>
+          <div><label for="pwdchk">암호확인</label></div>
+          <div><input type="password" id="pswchk"><span>* 같은 암호를 입력하세요</span></div>
+          <div><label for="email">이메일</label></div>
+          <div><input type="text" id="email">@<input type="text">
+            <select name="" id="">
+              <option value="">naver.com</option>
+              <option value="" selected>gmail.com</option>
+              <option value="">hotmail.com</option>
+            </select>
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+          <div><label for="addr">주소</label></div>
+          <div>
+            <input type="text" id="addr">
+            <input class="btn" type="button" value="주소찾기">
+          </div>
+          <div><label for="mobile">휴대폰</label></div>
+          <div>
+            <div>
+              <input type="radio" name="mobile" id="mobile"><label for="">SKT</label>
+              <input type="radio" name="mobile" id="mobile"><label for="">KT</label>
+              <input type="radio" name="mobile" id="mobile"><label for="">LGU+</label>
+              <i class="fa-solid fa-mobile-retro"></i>
+            </div>
+            <div>
+              <select name="" id="">
+                <option value="">010</option>
+                <option value="">016</option>
+                <option value="" selected>018</option>
+              </select>
+              <input type="text">-<input type="text">
+            </div>
+          </div>
+          <div><label for="">관심</label></div>
+          <div>
+            <input type="checkbox"><label for="">쇼핑</label>
+            <input type="checkbox"><label for="">게임</label>
+            <input type="checkbox"><label for="">여행</label>
+            <input type="checkbox"><label for="">기타</label>
+          </div>
+          <div><label for="intro">자기소개</label></div>
+          <div><textarea id="intro" style="box-sizing:border-box;width:100%;height:100px;"></textarea></div>
+          <div class="btn_grp">
+            <input class="btn" type="button" value="확인">
+            <input class="btn" type="reset" value="다시입력">
+
+            <!-- <button class="btn"><i class="fa-solid fa-mobile-retro"></i>s</button> 
+              아이콘을 버튼으로 활용-->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

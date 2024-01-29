@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습</title>
+  <style>
+    /* * {
+      outline: 1px solid black;
+    } */
+
+
+
+    .um {
+      display: flex;
+      justify-content: center;
+      background-color: lightcoral;
+      height: 50px;
+    }
+    .um-it {
+      width: 50vw;
+      background-color: rgb(144, 89, 89);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .head{
+      display: flex;
+      justify-content: center;
+      background-color: blue;
+      height: 100px;
+    }
+    .hit{
+      width: 50vw;
+      background-color: rgb(66, 32, 32);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }  
+    .main{
+      display: flex;
+      justify-content: center;
+      background-color: pink;
+      height: 100px;
+    }
+    .mit{
+      display: flex;
+      width: 50vw;
+      background-color: lightcyan;
+      border: 5px solid black;
+      box-sizing: border-box;
+      
+      
+    }
+    
+    .main .mit :nth-of-type(1){
+      flex : 2;
+      /* flex-grow: 2; */
+      /* flex-shrink: 1;
+      flex-basis: auto; */
+      background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main .mit :nth-of-type(2){
+      flex : 1;
+      /* flex-grow: 1; */
+      background-color: lightgreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .main .mit :nth-of-type(3){
+      flex : 1;
+      /* flex-grow: 1; */
+      background-color: lightsalmon;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="a um">
+    <div class="um-it">Uppermost Menu</div>
+  </div>
+  
+  <div class="a head">
+    <div class="hit">Header</div>
+  </div>
+
+  <div class="a main">
+    <div class="mit">
+      <div class="c">content</div>
+      <div class="sb">sidebanner</div>
+      <div class="sm">sidemenu</div>
+    </div>
+  </div>
+  
+</body>
+</html>

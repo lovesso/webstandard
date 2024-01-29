@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      outline: 1px solid black;
+    }
+    .waper{
+      display: grid;
+      grid-template-columns: lfr 50vw 1fr;
+      grid-template-rows: 50px 70px 200px;
+      grid-template-areas:
+      "um um um"
+      "h h h"
+      ". m .";
+    }
+    .um {
+      grid-area: um;
+      display: grid;
+      justify-content: center;
+    }
+    .head {
+      grid-area: h;
+    }
+    .main {
+      grid-area: m;
+      
+    }
+
+    
+  </style>
+
+</head>
+<body>
+
+  <div class="waper">
+    <div class="um">
+      <div class="uit">Uppermost Menu</div>
+    </div>
+    
+    <div class="head">
+      <div class="hit">Header</div>
+    </div>
+    <div class="main">
+      <div class="mit">
+        <div class="c">content</div>
+        <div class="sb">sidebanner</div>
+        <div class="sm">sidemenu</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

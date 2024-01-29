@@ -1,0 +1,163 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex</title>
+  <style>
+    * {
+      margin: 0;
+      /* content border 예쁘게 표시 */
+      box-sizing: border-box;
+    }
+    
+    /* div 하위 모두 적용 */
+    div > * {
+      width: 50vw;
+      color: white;
+      font-size: 1.1rem; /* 16x1.1px */
+      /* text 정렬하려면 안에 요소들도 flex 적용하여 가운데 정렬 */
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+
+    /* ----------------------------------------------- */
+    .uppermost_menu {
+      background-color: rgb(22, 0, 82);
+      display: flex;
+      justify-content: center;
+    }
+
+    .uppermost_menu .upper_item {
+      background-color: rgb(49, 8, 161);
+      height: 5vh;
+    }
+
+    /* ----------------------------------------------- */
+
+    .header {
+      background-color: rgb(49, 8, 161);
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .header .header_item {
+      background-color: rgb(172, 0, 230);
+      height: 10vh;
+    }
+
+    /* ----------------------------------------------- */
+
+    .nav {
+      background-color: rgb(172, 0, 230);
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav .nav_item {
+      background-color: rgb(228, 155, 252);
+      height: 4vh;
+    }
+
+    /* ----------------------------------------------- */
+
+    .container {
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+    }
+
+    .container .article {
+      border: 5px solid black;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      /* 포인트 : 위에서  div > * div들 다 가운데정렬 먹여서
+      그 하위에 있는 애들 때문에 align-items:stretch로 재정의 */
+      align-items: stretch; 
+    }
+
+    .container .article > * {
+      flex-basis: 0;
+    }
+
+    .container .article :nth-of-type(1) {
+      background-color: green;
+      flex-grow: 3;
+
+    }
+
+    .container .article :nth-of-type(2) {
+      background-color: rgb(40, 72, 104);
+      flex-grow: 1;
+
+    }
+
+    .container .article :nth-of-type(3) {
+      background-color: rgb(106, 135, 106);
+      flex-grow: 1;
+    }
+
+    /* ----------------------------------------------- */
+
+    .footer_menu {
+      background-color: rgb(228, 155, 252);
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer_menu .footer_menu_item {
+      background-color: rgb(255, 200, 254);
+      height: 4vh;
+    }
+
+    /* ----------------------------------------------- */
+
+    .footer {
+      background-color: rgb(255, 200, 254);
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer .footer_item {
+      background-color: rgb(193, 173, 193);
+      height: 10vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="uppermost_menu">
+    <div class="upper_item">Uppermost Menu</div>
+  </div>
+
+  <div class="header">
+    <div class="header_item">Header</div>
+  </div>
+
+  <div class="nav">
+    <div class="nav_item">Nav</div>
+  </div>
+
+  <div class="container">
+    <div class="article">
+      <div class="content">Content</div>
+      <div class="sidebanner">Sidebanner</div>
+      <div class="sidemenu">Sidemenu</div>
+    </div>
+  </div>
+
+  <div class="footer_menu">
+    <div class="footer_menu_item">Footer Menu</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer_item">Footer</div>
+  </div>
+
+</body>
+
+</html>
